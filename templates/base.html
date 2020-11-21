@@ -15,7 +15,7 @@
 <body>
 
     <header>
-        <nav class="nav-extended green darken-1">
+        <nav class="nav-extended green">
 <!--Dropdown list values-->
             <ul id="dropdown1" class="dropdown-content">
                 <li><a href="#!">My Sightings</a></li>
@@ -31,7 +31,7 @@
                 <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Sightings<i class="material-icons right">arrow_drop_down</i></a></li>
                 <li><a href=".html">Log Out</a></li>
                 <li><a href=".html">Log In</a></li>
-                <li><a href=".html">Register</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
             </ul>
             </div>
         </nav>
@@ -43,7 +43,7 @@
             <li><a href=".html">Add Sigthing</a></li>
             <li><a href=".html">Log Out</a></li>
             <li><a href=".html">Log In</a></li>
-            <li><a href=".html">Register</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
         </ul>
 
     </header>
