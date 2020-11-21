@@ -19,6 +19,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+#home page
 @app.route("/")
 @app.route("/index")
 def index():
@@ -26,6 +27,7 @@ def index():
     return render_template("index.html", endangered_birds=endangered_birds)
 
 
+#register page
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -50,6 +52,7 @@ def register():
     return render_template("register.html")
 
 
+#login page
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -58,7 +61,7 @@ def login():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            # ensure hashed password matches user input
+            # check if password matches user input
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
@@ -68,7 +71,7 @@ def login():
                         'my_sightings', username=session["user"]))
 
             else:
-                # invalid password match
+                # invalid password 
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
 
@@ -79,13 +82,25 @@ def login():
 
     return render_template("login.html")
 
-
+# my sightings page
 @app.route("/my_sightings/<username>",methods=["GET", "POST"])
 def my_sightings(username):
-        # grab the session user's username from db
+        # grab the session user's username from db ENTER NEW VSLUES HERE
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("my_sightings.html", username=username)
+
+    if session["user"]:
+        return render_template("my_sightings.html", username=username)
+    
+    return redirect(url_for("login"))
+
+#log out page
+@app.route("/logout")
+def logout():
+    # remove user's ALTERANTIVE cookies session.clear()
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("login"))
 
     
 if __name__ == "__main__":

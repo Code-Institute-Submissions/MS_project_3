@@ -26,24 +26,30 @@
             <a href="{{ url_for('index') }}" class="brand-logo">Save Birds</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="{{ url_for('index') }}">Home</a></li>
-                <li><a href=".html">Hot Locations</a></li>
-                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Sightings<i class="material-icons right">arrow_drop_down</i></a></li>
-                <li><a href=".html">Log Out</a></li>
-                <li><a href="{{ url_for('login') }}">Log In</a></li>
-                <li><a href="{{ url_for('register') }}">Register</a></li>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="#">Hot Locations</a></li>
+                {% if session.user %}
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Sightings<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('login') }}">Log In</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                {% endif %}
             </ul>
             </div>
         </nav>
 <!--Mobile Navbar-->
         <ul class="sidenav" id="mobile-demo">
-            <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href=".html">Hot Locations</a></li>
-            <li><a href="{{ url_for('my_sightings', username=session['user']) }}">My Sightings</a></li>
-            <li><a href=".html">Add Sigthing</a></li>
-            <li><a href=".html">Log Out</a></li>
-            <li><a href="{{ url_for('login') }}">Log In</a></li>
-            <li><a href="{{ url_for('register') }}">Register</a></li>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="#">Hot Locations</a></li>
+            {% if session.user %}
+                <li><a href="{{ url_for('my_sightings', username=session['user']) }}">My Sightings</a></li>
+                <li><a href="#">Add Sigthing</a></li>
+                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+            {% else %}
+                <li><a href="{{ url_for('login') }}">Log In</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
+            {% endif %}
         </ul>
 
     </header>
