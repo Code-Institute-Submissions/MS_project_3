@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birds</title>
+</head>
+<body>
+    {% for endangered_bird in endangered_birds %}
+        {{ endangered_bird.name }}<br>
+        {{ endangered_bird.short_description}}<br>
+        {{ endangered_bird.image}}<br>
+        {{ endangered_bird.conservation}}<br>
+    {% endfor %}
+
+</body>
+</html>

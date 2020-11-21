@@ -18,11 +18,11 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-
 @app.route("/")
+@app.route("/index")
 def index():
-    birds = mongo.db.birds.find()
-    return render_template("index.html", endangered_birds=birds)
+    endangered_birds = mongo.db.endangered_birds.find()
+    return render_template("index.html", endangered_birds=endangered_birds)
 
 
 if __name__ == "__main__":
