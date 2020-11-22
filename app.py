@@ -27,6 +27,14 @@ def index():
     return render_template("index.html", endangered_birds=endangered_birds)
 
 
+@app.route("/index")
+def about_bird():
+    endangered_birds = mongo.db.endangered_birds.find_one(
+        {"url": request.form.get("url")})
+
+    return render_template("endangared_birds.html", endangered_birds=endangered_birds)
+
+
 #register page
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -101,6 +109,8 @@ def logout():
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
+
 
     
 if __name__ == "__main__":

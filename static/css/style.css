@@ -3,3 +3,7 @@ body {
     color: #212529;
     font-family: Lora,'Times New Roman', sans-serif;
 }
+
+.card-image {
+    width: 100%;
+}
