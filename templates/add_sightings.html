@@ -6,18 +6,65 @@
 
   <div class="row">
     <form class="col s12" method="POST" action="">
-      <div class="row">
-        <div class="input-field col s12">
-          <i class="material-icons prefix">account_circle</i>
-          <input id="icon_prefix" type="text" class="validate">
-          <label for="icon_prefix">First Name</label>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">create</i>
+                <select id="name" type="text" name="name" class="validate" required>
+                    <option value="" disabled selected>Choose the Bird</option>
+                {% for endangered_bird in endangered_birds %}
+                
+                    <option value="{{ endangered_bird.name }}">{{ endangered_bird.name }}</option>
+                {% endfor %}
+
+                    
+<!--                    <option value="1">Balearic Shearwater</option>
+                    <option value="2">Black-tailed Godwit</option>
+                    <option value="3">Buff-breasted Sandpiper</option>
+                    <option value="4">Corncrake</option>
+                    <option value="5">Dartford Warbler</option>
+                    <option value="6">Eurasian Curlew</option>
+                    <option value="7">Ferruginous Duck</option>
+                    <option value="8">Great Bustard</option>
+                    <option value="9">Ivory Gull</option>
+                    <option value="10">Sociable Lapwing</option>
+-->
+                </select>
+                <label for="name"></label>
+            </div>
         </div>
-        <div class="input-field col s12">
-          <i class="material-icons prefix">phone</i>
-          <input id="icon_telephone" type="tel" class="validate">
-          <label for="icon_telephone">Telephone</label>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">place</i>
+                <select id="location" type="text" name="location" class="validate" required>
+                    <option value="" disabled selected>Choose the Location</option>
+                    <option value="1">Amsterdam</option>
+                    <option value="2">Rotterdam</option>
+                    <option value="3">Den Haag</option>
+                    <option value="4">Delft</option>
+                    <option value="5">Maastricht</option>
+                    <option value="6">Utrecht</option>
+                    <option value="7">Leiden</option>
+                    <option value="8">Eindhoven</option>
+                    <option value="9">Haarlem</option>
+                    <option value="10">Groningen</option>
+                </select>
+                <label for="location"></label>
+            </div>
         </div>
-      </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">event</i>
+                <input id="date" name="date" type="text" class="datepicker validate" required>
+                <label for="date">Choose the Date</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">comment</i>
+                <textarea id="comment" name="comment" maxlength="150" class="materialize-textarea validate"></textarea>
+                <label for="comment">Write Your Comment</label>
+            </div>
+        </div>
     </form>
   </div>
 

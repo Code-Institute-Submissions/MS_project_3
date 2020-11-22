@@ -113,7 +113,8 @@ def logout():
 
 @app.route("/add_sightings")
 def add_sightings():
-    return render_template("add_sightings.html")
+    bird_name = mongo.db.endangered_birds.find()
+    return render_template("add_sightings.html", endangered_birds=bird_name)
     
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
