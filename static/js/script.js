@@ -1,7 +1,6 @@
-
-
-  $(document).ready(function(){
+$(document).ready(function()
+{
     $('.sidenav').sidenav({edge: "right"});
 
-$(".dropdown-trigger").dropdown();
-  });
+    $(".dropdown-trigger").dropdown();
+});

@@ -1,11 +1,62 @@
 {% extends 'base.html' %} 
 {% block content %}
 
+    <div class="row">
+        <div class="col l10 m10 s12">
+            <div class="post-preview">
+                <h2 class="post-title">Our Mission</h2>
+                <p class="post-subtitle">Birds population is rapidly descreaing worldwide. We need volunteers' help to provide the number of the birds sightings in different areas.</p>
+                <p class="post-subtitle">Use the IUCN Red List of Endangered Species (IUCN) guidance to see which birds need your immediate attention: </p>
+                    <ul>    
+                        <li>Critically Endangered (CR-IUCN)</li>
+                        <li>Endangered (EN-IUCN)</li>
+                        <li>Extinct in the Wild (EW-IUCN)</li>
+                        <li>Vulnerable (VU-IUCN)</li>
+                        <li>Near Threatened (NT-IUCN)</li>
+                    </ul>    
+            </div>
+        </div>
+    </div> 
+
     {% for endangered_bird in endangered_birds %}
         {{ endangered_bird.name }}<br>
         {{ endangered_bird.short_description}}<br>
         {{ endangered_bird.image}}<br>
         {{ endangered_bird.conservation}}<br>
     {% endfor %}
+
+    <div class="row">
+        <div class="col s12 m6">
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/sample-1.jpg">
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6">
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/sample-1.jpg">
+                    <span class="card-title">Card Title</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 {% endblock %}
