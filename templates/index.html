@@ -18,44 +18,23 @@
         </div>
     </div> 
 
-    {% for endangered_bird in endangered_birds %}
-        {{ endangered_bird.name }}<br>
-        {{ endangered_bird.short_description}}<br>
-        {{ endangered_bird.image}}<br>
-        {{ endangered_bird.conservation}}<br>
-    {% endfor %}
-
     <div class="row">
+{% for endangered_bird in endangered_birds %}
         <div class="col s12 m6">
             <div class="card">
                 <div class="card-image">
-                    <img src="images/sample-1.jpg">
-                    <span class="card-title">Card Title</span>
+                    <img src="{{ endangered_bird.image }}">
                 </div>
-                <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
+                <div class="card-content">                    
+                    <span class="card-title text-shadow">{{ endangered_bird.name }}</span>
+                    <p>{{ endangered_bird.short_description}}</p>
                 </div>
                 <div class="card-action">
-                    <a href="#">This is a link</a>
+                    <a href="{{ endangered_bird.url }}">Learn More</a>
                 </div>
             </div>
         </div>
-        <div class="col s12 m6">
-            <div class="card">
-                <div class="card-image">
-                    <img src="images/sample-1.jpg">
-                    <span class="card-title">Card Title</span>
-                </div>
-                <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
-                </div>
-                <div class="card-action">
-                    <a href="#">This is a link</a>
-                </div>
-            </div>
-        </div>
+{% endfor %}
     </div>
 
 

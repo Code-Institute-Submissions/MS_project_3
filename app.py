@@ -23,7 +23,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/index")
 def index():
-    endangered_birds = mongo.db.endangered_birds.find()
+    endangered_birds = list(mongo.db.endangered_birds.find())
     return render_template("index.html", endangered_birds=endangered_birds)
 
 
