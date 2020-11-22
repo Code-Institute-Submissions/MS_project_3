@@ -111,7 +111,9 @@ def logout():
     return redirect(url_for("login"))
 
 
-
+@app.route("/add_sightings")
+def add_sightings():
+    return render_template("add_sightings.html")
     
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
