@@ -90,17 +90,13 @@ def login():
 
     return render_template("login.html")
 
-# my sightings page
-@app.route("/my_sightings/<username>",methods=["GET", "POST"])
-def my_sightings(username):
-        # grab the session user's username from db 
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
-
-    if session["user"]:
-        return render_template("my_sightings.html", username=username)
+# !!!!!my sightings page
+@app.route("/my_sightings/<sighting_id>", methods=["GET", "POST"])
+def my_sightings(sighting_id):
+    sigthing = mongo.db.sightings.find_one({"_id": ObjectId(sighting_id)})
     
-    return redirect(url_for("login"))
+    return render_template("my_sightings.html", sighting=my_sightings)
+
 
 #log out page
 @app.route("/logout")
@@ -126,6 +122,13 @@ def add_sightings():
 
     bird_name = mongo.db.endangered_birds.find()
     return render_template("add_sightings.html", endangered_birds=bird_name)
+
+@app.route("/edit_sighting/<sighting_id>", methods=["GET", "POST"])
+def edit_sighting(sighting_id):
+    sigthing = mongo.db.sightings.find_one({"_id": ObjectId(sighting_id)})
+
+    return render_template("edit_sightings.html", sighting=sigthing)
+
     
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

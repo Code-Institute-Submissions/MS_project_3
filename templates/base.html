@@ -18,7 +18,7 @@
         <nav class="nav-extended blue">
 <!--Dropdown list values-->
             <ul id="dropdown1" class="dropdown-content">
-                <li><a href="{{ url_for('my_sightings', username=session['user']) }}">My Sightings</a></li>
+                <li><a href="{{ url_for('my_sightings', sighting_id=sightings._id ) }}">My Sightings</a></li>
                 <li><a href="{{ url_for('add_sightings') }}">Add Sightings</a></li>
             </ul>
 <!--Main navbar-->
@@ -43,7 +43,7 @@
                 <li><a href="{{ url_for('index') }}">Home</a></li>
                 <li><a href="#">Hot Locations</a></li>
             {% if session.user %}
-                <li><a href="{{ url_for('my_sightings', username=session['user']) }}">My Sightings</a></li>
+                <li><a href="{{ url_for('my_sightings', sighting_id=sightings._id) }}">My Sightings</a></li>
                 <li><a href="{{ url_for('add_sightings') }}">Add Sigthing</a></li>
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}

@@ -1,0 +1,72 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+<h3>Edit Sighting</h3>
+
+<!--chooce bird-->
+  <div class="row">
+    <form class="col s12" method="POST" action="{{url_for('edit_sighting', sighting_id=sighting.id)}}">
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">create</i>
+                <select id="name" type="text" name="name" class="validate" required>
+                    <option value="" disabled selected>Choose the Bird</option>
+                {% for endangered_bird in endangered_birds %}
+                
+                    <option value="{{ endangered_bird.name }}">{{ endangered_bird.name }}</option>
+
+                {% endfor %}
+                </select>
+                <label for="name"></label>
+            </div>
+        </div>
+<!--Location-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">place</i>
+                <select id="location" type="text" name="location" class="validate" required>
+                    <option value="" disabled selected>Choose the Location</option>
+                    <option value="1">Amsterdam</option>
+                    <option value="2">Rotterdam</option>
+                    <option value="3">Den Haag</option>
+                    <option value="4">Delft</option>
+                    <option value="5">Maastricht</option>
+                    <option value="6">Utrecht</option>
+                    <option value="7">Leiden</option>
+                    <option value="8">Eindhoven</option>
+                    <option value="9">Haarlem</option>
+                    <option value="10">Groningen</option>
+                </select>
+                <label for="location"></label>
+            </div>
+        </div>
+<!--Choose date-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">event</i>
+                <input id="date" name="date" type="text" class="datepicker validate" required>
+                <label for="date">Choose the Date</label>
+            </div>
+        </div>
+<!--Comment-->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">comment</i>
+                <textarea id="comment" name="comment" maxlength="150" class="materialize-textarea validate"></textarea>
+                <label for="comment">Write Your Comment</label>
+            </div>
+        </div>
+
+<!--Submit button-->
+        <div class="row">
+            <div class="col s12 center-align">
+            <button type="submit" class="btn-large light">
+            Edit
+            </button>
+            </div>
+        </div>
+    </form>
+  </div>
+
+
+{% endblock %}
