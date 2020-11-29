@@ -3,9 +3,9 @@
 
 <h3>Add Sighting</h3>
 
-
+<!--chooce bird-->
   <div class="row">
-    <form class="col s12" method="POST" action="">
+    <form class="col s12" method="POST" action="{{url_for('add_sightings')}}">
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">create</i>
@@ -14,24 +14,13 @@
                 {% for endangered_bird in endangered_birds %}
                 
                     <option value="{{ endangered_bird.name }}">{{ endangered_bird.name }}</option>
-                {% endfor %}
 
-                    
-<!--                    <option value="1">Balearic Shearwater</option>
-                    <option value="2">Black-tailed Godwit</option>
-                    <option value="3">Buff-breasted Sandpiper</option>
-                    <option value="4">Corncrake</option>
-                    <option value="5">Dartford Warbler</option>
-                    <option value="6">Eurasian Curlew</option>
-                    <option value="7">Ferruginous Duck</option>
-                    <option value="8">Great Bustard</option>
-                    <option value="9">Ivory Gull</option>
-                    <option value="10">Sociable Lapwing</option>
--->
+                {% endfor %}
                 </select>
                 <label for="name"></label>
             </div>
         </div>
+<!--Location-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">place</i>
@@ -51,6 +40,7 @@
                 <label for="location"></label>
             </div>
         </div>
+<!--Choose date-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">event</i>
@@ -58,11 +48,21 @@
                 <label for="date">Choose the Date</label>
             </div>
         </div>
+<!--Comment-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">comment</i>
                 <textarea id="comment" name="comment" maxlength="150" class="materialize-textarea validate"></textarea>
                 <label for="comment">Write Your Comment</label>
+            </div>
+        </div>
+
+<!--Submit button-->
+        <div class="row">
+            <div class="col s12 center-align">
+            <button type="submit" class="btn-large light">
+            Add
+            </button>
             </div>
         </div>
     </form>

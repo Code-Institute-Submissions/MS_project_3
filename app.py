@@ -27,12 +27,12 @@ def index():
     return render_template("index.html", endangered_birds=endangered_birds)
 
 
-@app.route("/index")
-def about_bird():
-    endangered_birds = mongo.db.endangered_birds.find_one(
-        {"url": request.form.get("url")})
+@app.route("/view_bird/<bird_id>")
+def view_bird(bird_id):
+    endangered_bird = mongo.db.endangered_birds.find_one(
+        {"_id": ObjectId(bird_id)})
 
-    return render_template("endangared_birds.html", endangered_birds=endangered_birds)
+    return render_template("endangered_bird.html", endangered_bird=endangered_bird)
 
 
 #register page
@@ -93,7 +93,7 @@ def login():
 # my sightings page
 @app.route("/my_sightings/<username>",methods=["GET", "POST"])
 def my_sightings(username):
-        # grab the session user's username from db ENTER NEW VSLUES HERE
+        # grab the session user's username from db 
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
@@ -111,8 +111,19 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_sightings")
+@app.route("/add_sightings", methods=["GET", "POST"])
 def add_sightings():
+    if request.method == "POST":
+        sightings ={
+            "name": request.form.get("name"),
+            "location": request.form.get("location"),
+            "date": request.form.get("date"),
+            "comment": request.form.get("comment"),
+            "created_by": session["user"]
+        }
+        mongo.db.sightings.insert_one(sightings)
+        flash("Sighting is Successfully Added")
+
     bird_name = mongo.db.endangered_birds.find()
     return render_template("add_sightings.html", endangered_birds=bird_name)
     

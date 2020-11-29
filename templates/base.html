@@ -14,8 +14,8 @@
 </head>
 <body>
 
-    <header>
-        <nav class="nav-extended green">
+    <header class="header">
+        <nav class="nav-extended blue">
 <!--Dropdown list values-->
             <ul id="dropdown1" class="dropdown-content">
                 <li><a href="{{ url_for('my_sightings', username=session['user']) }}">My Sightings</a></li>
@@ -23,7 +23,7 @@
             </ul>
 <!--Main navbar-->
             <div class="nav-wrapper">
-            <a href="{{ url_for('index') }}" class="brand-logo">Save Birds</a>
+            <a href="{{ url_for('index') }}" class="brand-logo"> Save Birds</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('index') }}">Home</a></li>
