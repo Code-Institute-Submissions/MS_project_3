@@ -14,9 +14,9 @@
 
                 {% for endangered_bird in endangered_birds %}
                 {% if endangered_bird.name == sighting.name %}
-                    <option value="{{ sighting.name }}" selected>{{ sighting.name }}</option>
+                    <option value="{{ endangered_bird.name }}" selected>{{ endangered_bird.name }}</option>
                 {% else %}
-                    <option value="{{ sighting.name }}">{{ sighting.name }}</option>
+                    <option value="{{ endangered_bird.name }}">{{ endangered_bird.name }}</option>
                 {% endif %}
                 {% endfor %}
                 </select>
@@ -30,10 +30,11 @@
                 <select id="location" type="text" name="location" class="validate" required >
                     <option value="" disabled>Choose the Location</option> 
                 {% for location in locations %}
+
                 {% if location.city == sighting.location %}
-                    <option value="{{ sighting.location }}" selected>{{ sighting.location }}</option>
+                    <option value="{{ location.city }}" selected>{{ location.city }}</option>
                 {% else %}
-                    <option value="{{ sighting.location }}" selected>{{ sighting.location }}</option>
+                    <option value="{{ location.city }}" selected>{{ location.city }}</option>
                 {% endif %}
                 {% endfor %}
                     

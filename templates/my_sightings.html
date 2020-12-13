@@ -1,12 +1,10 @@
 {% extends 'base.html' %} 
 {% block content %}
 
-
-
-    <h3 class="light-blue-text text-darken-4 center-align">My Sightings</h3>
+<h3 class="light-blue-text text-darken-4 center-align">My Sightings</h3>
 
 {% for sighting in sightings%}
-
+{% if session.user|lower == sighting.created_by|lower %}
   <ul class="collapsible">
     <li>
     <div class="collapsible-header"><i class="material-icons">expand_more</i>
@@ -29,7 +27,7 @@
     </div>
     </li>
   </ul>
-
+{% endif %}
 {% endfor %}
 
 {% endblock %}

@@ -120,14 +120,28 @@ def add_sightings():
         flash("Sighting is Successfully Added")
 
     bird_name = mongo.db.endangered_birds.find()
-    return render_template("add_sightings.html", endangered_birds=bird_name)
+    city = mongo.db.locations.find()
+    return render_template("add_sightings.html", endangered_birds=bird_name, locations=city)
 
 
 
 @app.route("/edit_sighting/<sighting_id>", methods=["GET", "POST"])
 def edit_sighting(sighting_id):
+    if request.method == "POST":
+        update ={
+            "name": request.form.get("name"),
+            "location": request.form.get("location"),
+            "date": request.form.get("date"),
+            "comment": request.form.get("comment"),
+            "created_by": session["user"]
+        }
+        mongo.db.sightings.update({"_id": ObjectId(sighting_id)}, update)
+        flash("Sighting is Successfully Updated")
+
     sighting = mongo.db.sightings.find_one({"_id": ObjectId(sighting_id)})
-    return render_template("edit_sightings.html", sighting=sighting)
+    bird_name = mongo.db.endangered_birds.find()
+    city = mongo.db.locations.find()
+    return render_template("edit_sightings.html", sighting=sighting, endangered_birds=bird_name, locations=city)
 
 
 if __name__ == "__main__":
