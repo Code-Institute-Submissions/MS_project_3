@@ -6,6 +6,11 @@ $(document).ready(function()
 
     $('select').formSelect();
 
+    $(document).ready(function()
+    {
+    $('.collapsible').collapsible();
+    });
+
     $(".datepicker").datepicker({
         format: "dd mmmm, yyyy",
         yearRange: 3,
@@ -14,4 +19,5 @@ $(document).ready(function()
             done: "Select"
         }
     });
+    
 });

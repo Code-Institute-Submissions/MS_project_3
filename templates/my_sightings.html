@@ -4,25 +4,25 @@
 
 
     <h3 class="light-blue-text text-darken-4 center-align">My Sightings</h3>
+
 {% for sighting in sightings%}
-    <ul class="collection with-header">
-        <li class="collection-header"><h4>{{ sightings.name }}</h4></li>
-        <li class="collection-item">{{ sightings.location }}</li>
-        <li class="collection-item">{{ sightings.date }}</li>
-        <li class="collection-item">{{ sightings.comment}}</li>
-        <li class="collection-item">{{ sightings.created_by}}</li>
-    </ul>
+
+  <ul class="collapsible">
+    <li>
+    <div class="collapsible-header"><i class="material-icons">expand_more</i>
+        <h6>{{ sighting.name }}: {{ sighting.location }}</h6>
+    </div>
+    <div class="collapsible-body">
+        <ul>
+            <li>{{ sighting.date }}</li>
+            <li>{{ sighting.comment}}</li>
+            <li>{{ sighting.created_by}}</li>
+        </ul>
+    </div>
+    </li>
+  </ul>
+
 {% endfor %}
 
-<div class="row">
-    <div class="col-6">
-    <a href="{{'edit_sighting', sighting_id=sighting.id}}" class="btn-small">Edit</a>
-    </div>
-        
-    <div class="col-6">
-    <a href="" class="btn-small">Delete</a>
-    </div>
-</div>
-    
 
 {% endblock %}

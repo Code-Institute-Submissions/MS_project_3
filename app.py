@@ -76,7 +76,7 @@ def login():
                     flash("Welcome, {}".format(
                         request.form.get("username")))
                     return redirect(url_for(
-                        'my_sightings', username=session["user"]))
+                        'add_sightings', username=session["user"]))
 
             else:
                 # invalid password 
@@ -90,21 +90,21 @@ def login():
 
     return render_template("login.html")
 
-# !!!!!my sightings page
-@app.route("/my_sightings/<sighting_id>", methods=["GET", "POST"])
-def my_sightings(sighting_id):
-    sigthing = mongo.db.sightings.find_one({"_id": ObjectId(sighting_id)})
-    
-    return render_template("my_sightings.html", sighting=my_sightings)
-
 
 #log out page
 @app.route("/logout")
 def logout():
-    # remove user's ALTERANTIVE cookies session.clear()
+    # remove user's cookies
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("login"))
+
+
+@app.route("/my_sightings")
+def my_sightings():
+    user_sightings = list(mongo.db.sightings.find())
+    print(user_sightings)
+    return render_template("my_sightings.html", sightings=user_sightings)
 
 
 @app.route("/add_sightings", methods=["GET", "POST"])
@@ -122,6 +122,7 @@ def add_sightings():
 
     bird_name = mongo.db.endangered_birds.find()
     return render_template("add_sightings.html", endangered_birds=bird_name)
+
 
 @app.route("/edit_sighting/<sighting_id>", methods=["GET", "POST"])
 def edit_sighting(sighting_id):
