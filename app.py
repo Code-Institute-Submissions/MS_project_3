@@ -124,7 +124,6 @@ def add_sightings():
     return render_template("add_sightings.html", endangered_birds=bird_name, locations=city)
 
 
-
 @app.route("/edit_sighting/<sighting_id>", methods=["GET", "POST"])
 def edit_sighting(sighting_id):
     if request.method == "POST":
@@ -142,6 +141,13 @@ def edit_sighting(sighting_id):
     bird_name = mongo.db.endangered_birds.find()
     city = mongo.db.locations.find()
     return render_template("edit_sightings.html", sighting=sighting, endangered_birds=bird_name, locations=city)
+
+
+@app.route("/delete_sighting/<sighting_id>")
+def delete_sighting(sighting_id):
+    mongo.db.sightings.remove({"_id": ObjectId(sighting_id)})
+    flash("Sighting is Successfully Deleted")
+    return redirect(url_for("my_sightings"))
 
 
 if __name__ == "__main__":
