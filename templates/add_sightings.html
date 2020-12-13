@@ -26,7 +26,13 @@
                 <i class="material-icons prefix">place</i>
                 <select id="location" type="text" name="location" class="validate" required>
                     <option value="" disabled selected>Choose the Location</option>
-                    <option value="Amsterdam">Amsterdam</option>
+                {% for location in locations %}
+                
+                    <option value="{{ location.city }}">{{ location.city }}</option>
+
+                {% endfor %}
+
+                    <!-- <option value="Amsterdam">Amsterdam</option>
                     <option value="Rotterdam">Rotterdam</option>
                     <option value="Den Haag">Den Haag</option>
                     <option value="Delft">Delft</option>
@@ -35,7 +41,9 @@
                     <option value="Leiden">Leiden</option>
                     <option value="Eindhoven">Eindhoven</option>
                     <option value="Haarlem">Haarlem</option>
-                    <option value="Groningen">Groningen</option>
+                    <option value="Groningen">Groningen</option> -->
+
+                    
                 </select>
                 <label for="location"></label>
             </div>

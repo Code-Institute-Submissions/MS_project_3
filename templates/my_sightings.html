@@ -20,11 +20,11 @@
         </ul>
     </div>
     <div class="row">
-        <div class="col s6">
-            <a href="" class="btn-small">Edit</a>
+        <div class="col s6 center-align">
+            <a href="{{ url_for('edit_sighting', sighting_id=sighting._id) }}" class="btn-small">Edit</a>
         </div>
-        <div class="col s6">
-            <a href="" class="btn-small">Delete</a>
+        <div class="col s6 center-align">
+            <a href="{{ url_for('my_sightings') }}" class="btn-small">Delete</a>
         </div>
     </div>
     </li>

@@ -5,37 +5,38 @@
 
 <!--chooce bird-->
   <div class="row">
-    <form class="col s12" method="POST" action="{{url_for('edit_sighting', sighting_id=sighting.id)}}">
+    <form class="col s12" method="POST" action="{{ url_for('edit_sighting', sighting_id=sighting._id) }}">
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">create</i>
                 <select id="name" type="text" name="name" class="validate" required>
-                    <option value="" disabled selected>Choose the Bird</option>
-                {% for endangered_bird in endangered_birds %}
-                
-                    <option value="{{ endangered_bird.name }}">{{ endangered_bird.name }}</option>
+                    <option value="" disabled>Choose the Bird</option>
 
+                {% for endangered_bird in endangered_birds %}
+                {% if endangered_bird.name == sighting.name %}
+                    <option value="{{ sighting.name }}" selected>{{ sighting.name }}</option>
+                {% else %}
+                    <option value="{{ sighting.name }}">{{ sighting.name }}</option>
+                {% endif %}
                 {% endfor %}
                 </select>
-                <label for="name"></label>
+                <label for="name">Bird Name</label>
             </div>
         </div>
 <!--Location-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">place</i>
-                <select id="location" type="text" name="location" class="validate" required>
-                    <option value="" disabled selected>Choose the Location</option>
-                    <option value="Amsterdam">Amsterdam</option>
-                    <option value="Rotterdam">Rotterdam</option>
-                    <option value="Den Haag">Den Haag</option>
-                    <option value="Delft">Delft</option>
-                    <option value="Maastricht">Maastricht</option>
-                    <option value="Utrecht">Utrecht</option>
-                    <option value="Leiden">Leiden</option>
-                    <option value="Eindhoven">Eindhoven</option>
-                    <option value="Haarlem">Haarlem</option>
-                    <option value="Groningen">Groningen</option>
+                <select id="location" type="text" name="location" class="validate" required >
+                    <option value="" disabled>Choose the Location</option> 
+                {% for location in locations %}
+                {% if location.city == sighting.location %}
+                    <option value="{{ sighting.location }}" selected>{{ sighting.location }}</option>
+                {% else %}
+                    <option value="{{ sighting.location }}" selected>{{ sighting.location }}</option>
+                {% endif %}
+                {% endfor %}
+                    
                 </select>
                 <label for="location"></label>
             </div>
@@ -44,7 +45,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">event</i>
-                <input id="date" name="date" type="text" class="datepicker validate" required>
+                <input id="date" name="date" type="text" class="datepicker validate" required
+                    value="{{ sighting.date }}">
                 <label for="date">Choose the Date</label>
             </div>
         </div>
@@ -52,7 +54,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">comment</i>
-                <textarea id="comment" name="comment" maxlength="150" class="materialize-textarea validate"></textarea>
+                <textarea id="comment" name="comment" maxlength="150" class="materialize-textarea validate" required>
+                {{- sighting.comment -}}</textarea>
                 <label for="comment">Write Your Comment</label>
             </div>
         </div>
@@ -60,6 +63,7 @@
 <!--Submit button-->
         <div class="row">
             <div class="col s12 center-align">
+            <a href="{{ url_for('my_sightings') }}" class="btn-large">Delete</a>
             <button type="submit" class="btn-large light">
             Edit
             </button>

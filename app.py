@@ -103,7 +103,6 @@ def logout():
 @app.route("/my_sightings")
 def my_sightings():
     user_sightings = list(mongo.db.sightings.find())
-    print(user_sightings)
     return render_template("my_sightings.html", sightings=user_sightings)
 
 
@@ -124,13 +123,13 @@ def add_sightings():
     return render_template("add_sightings.html", endangered_birds=bird_name)
 
 
+
 @app.route("/edit_sighting/<sighting_id>", methods=["GET", "POST"])
 def edit_sighting(sighting_id):
-    sigthing = mongo.db.sightings.find_one({"_id": ObjectId(sighting_id)})
+    sighting = mongo.db.sightings.find_one({"_id": ObjectId(sighting_id)})
+    return render_template("edit_sightings.html", sighting=sighting)
 
-    return render_template("edit_sightings.html", sighting=sigthing)
 
-    
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
