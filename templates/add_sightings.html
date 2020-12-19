@@ -27,23 +27,10 @@
                 <select id="location" type="text" name="location" class="validate" required>
                     <option value="" disabled selected>Choose the Location</option>
                 {% for location in locations %}
-                
+
                     <option value="{{ location.city }}">{{ location.city }}</option>
 
-                {% endfor %}
-
-                    <!-- <option value="Amsterdam">Amsterdam</option>
-                    <option value="Rotterdam">Rotterdam</option>
-                    <option value="Den Haag">Den Haag</option>
-                    <option value="Delft">Delft</option>
-                    <option value="Maastricht">Maastricht</option>
-                    <option value="Utrecht">Utrecht</option>
-                    <option value="Leiden">Leiden</option>
-                    <option value="Eindhoven">Eindhoven</option>
-                    <option value="Haarlem">Haarlem</option>
-                    <option value="Groningen">Groningen</option> -->
-
-                    
+                {% endfor %}              
                 </select>
                 <label for="location"></label>
             </div>
@@ -64,17 +51,13 @@
                 <label for="comment">Write Your Comment</label>
             </div>
         </div>
-
 <!--Submit button-->
         <div class="row">
-            <div class="col s16 center-align">
-                <button type="submit" id="all-btns" class="btn-large">
-                Add
-                </button>
+            <div class="col s12 center-align">
+                <button type="submit" id="all-btns" class="btn-large">Add</button>
             </div>
         </div>
     </form>
   </div>
-
 
 {% endblock %}

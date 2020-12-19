@@ -1,5 +1,4 @@
 body {
-    color: #03071e;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -12,7 +11,7 @@ h6 {
     font-weight: bold;
     margin: 30px 10px;
     text-align: center;
-    color: #03071e;
+    color: #212121;
 }
 
 p {
@@ -30,6 +29,10 @@ a {
 li {
     font-weight: 600px;
     font-size: 20px;
+}
+
+.container {
+    width: 100%;
 }
 
 /*--------Navbar---------*/
@@ -50,15 +53,17 @@ li {
 }
 
 
-/*-----Jumbotron-------*/
+/*-----Card-------*/
 
 .card-image {
     width: 100%;
 }
 
-.container {
-    width: 100%;
-    }
+#card-title {
+    font-size: 30px;
+    font-weight: 400px;
+    text-align: center;
+}
 
 /*-----Buttons-------*/
 
@@ -70,6 +75,7 @@ li {
     text-align: center;
     color: #fff;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 #top-btn {
@@ -80,17 +86,13 @@ li {
   z-index: 99; 
   border: none; 
   outline: none; 
-  background-color: #004d40;
+  background-color: #ff6f00;
   color: white; 
   cursor: pointer; 
   padding: 15px; 
   border-radius: 10px; 
   font-size: 18px; 
   opacity: 0.7;
-}
-
-#top-btn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
 }
 
 #register-btn {
@@ -116,4 +118,10 @@ li {
 #bird-text{
     margin: 15px;
     text-align: justify;
+}
+
+/*-----Collapsable-------*/
+
+#collapsible-margin {
+    margin: 10px;
 }
