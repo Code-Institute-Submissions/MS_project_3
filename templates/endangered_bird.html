@@ -10,16 +10,20 @@
     </div>
 </div>
 <hr>
-    <div class="col m12">
+    <div class="col s12">
         <h5>Description</h5>
-            <p>{{ endangered_bird.description }}</p>
+            <p id="bird-text">{{ endangered_bird.description }}</p>
         <h5>Habitat</h5>
-            <p>{{ endangered_bird.habitat }}</p>
+            <p id="bird-text">{{ endangered_bird.habitat }}</p>
         <h5>Behaviour</h5>
-            <p>{{ endangered_bird.behaviour }}</p>
+            <p id="bird-text">{{ endangered_bird.behaviour }}</p>
         <h5>Conservation</h5>
-            <p>{{ endangered_bird.conservation }}</p>
+            <p id="bird-text">{{ endangered_bird.conservation }}</p>
         </div>
 </div>
+
+<hr>
+
+<button onclick="topFunction()" id="top-btn" title="Go to top">Top</button>
 
 {% endblock %}
