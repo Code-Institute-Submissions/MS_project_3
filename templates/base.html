@@ -17,7 +17,7 @@
 <body>
 
     <header class="container">
-        <nav class="nav-wrapper deep-orange darken-1">
+        <nav class="nav-wrapper teal darken-4">
 <!--Dropdown list values-->
             <ul id="dropdown1" class="dropdown-content">
                 <li><a href="{{ url_for('my_sightings' ) }}">My Sightings</a></li>
@@ -25,7 +25,7 @@
             </ul>
 <!--Main navbar-->
             <div class="nav-wrapper">
-            <a href="{{ url_for('index') }}" class="brand-logo center"><i class="fas fa-feather"></i></a>
+            <a href="{{ url_for('index') }}" id="brand-logo" class="brand-logo center"><i class="fas fa-feather"></i></a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('index') }}">Home</a></li>

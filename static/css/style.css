@@ -12,6 +12,7 @@ h6 {
     font-weight: bold;
     margin: 30px 10px;
     text-align: center;
+    color: #03071e;
 }
 
 p {
@@ -21,10 +22,17 @@ p {
     font-size: 25px;
 }
 
+a {
+    color: #ff6f00;
+    font-weight: bold;
+}
+
 li {
     font-weight: 600px;
     font-size: 20px;
 }
+
+/*--------Navbar---------*/
 
 .list-items li {
     margin: 10px;
@@ -33,23 +41,50 @@ li {
 }
 
 .list-items i{
-    color: #bf360c ;
+    color: #004d40;
 }
 
-.nav i {
+#brand-logo i {
     margin: 0;
     float: none;
 }
-/*--------Navbar---------*/
 
 
+/*-----Jumbotron-------*/
 
 .card-image {
     width: 100%;
 }
 
-/*-----Jumbotron-------*/
-
 .container {
     width: 100%;
     }
+
+/*-----Buttons-------*/
+
+#all-btns {
+    background-color: #004d40;
+    font-weight: bold;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+}
+
+#register-btn {
+    font-weight: bold;
+} 
+
+/*-----Links-------*/
+
+#index-links {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    margin: 0; 
+}
+
+/*-----Images-------*/
+
+#bird-image {
+    padding: 0%;
+}
