@@ -16,13 +16,6 @@ $(document).ready(function()
     $('.parallax').parallax();
     });
 
-    $('.parallax').parallax('methodName');
-    $('.parallax').parallax('methodName', paramName);
-    
-
-
-
-
     $(".datepicker").datepicker({
         format: "dd mmmm, yyyy",
         yearRange: 3,

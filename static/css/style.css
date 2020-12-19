@@ -1,11 +1,6 @@
 body {
-    font-size: 20px;
-    color: 03071e;
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-p {
-  line-height: 1.5;
-  margin: 30px 0;
+    color: #03071e;
+    font-family: 'Open Sans', sans-serif;
 }
 
 h1,
@@ -14,24 +9,47 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    margin: 30px 10px;
+    text-align: center;
 }
 
-.nav-extended, .sidenav, .dropdown-content {
-     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+p {
+    margin: 10px;
+    font-weight: 600px;
+    line-height: 1.5;
+    font-size: 25px;
+}
+
+li {
+    font-weight: 600px;
+    font-size: 20px;
+}
+
+.list-items li {
+    margin: 10px;
+    font-weight: 600px;
+    margin: 10px;
+}
+
+.list-items i{
+    color: #bf360c ;
+}
+
+.nav i {
+    margin: 0;
+    float: none;
 }
 /*--------Navbar---------*/
 
 
-.nav-extended {
-    background-color: #065a60;
-}
 
 .card-image {
     width: 100%;
 }
 
 /*-----Jumbotron-------*/
+
 .container {
     width: 100%;
-}
+    }
