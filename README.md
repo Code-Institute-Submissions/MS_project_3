@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://git.heroku.com/bird-nl-project.git">Save Birds</a>
+  <a href="https://bird-nl-project.herokuapp.com/">Save Birds</a>
 </h1>
 
 <img src="/static/images/heroimage.jpg" alt="Landing Page"/>
@@ -7,10 +7,11 @@
 <div align="center">
     <h2>Birds population is rapidly descreaing worldwide. 
     We need volunteers' help to provide the number of the birds sightings in different areas.</h2>
-    <br>
 
-[Save Birds - Your Volunteering Organization](https://git.heroku.com/bird-nl-project.git)
+[Save Birds - Your Volunteering Organization](https://bird-nl-project.herokuapp.com/)
 </div>
+
+<br>
 
 ## Table of Contents
 1. [**UX**](#ux)
@@ -46,10 +47,28 @@
 
 ### Project goals
 
+The main goal of the project is to provide an environment for volunteers to collect the number and locations of their sightings. The target audience of the "Save Birds" is:
+ - Individuals who would like to contribute to the preservation of the natural environment
+ - Professionals who have been working on collecting endangered species data but need external support.
 
 
 ### Visitor goals
+
+- Clear contribution to the preservation of the natural environment.
+- Recognizing endangered birds in the local area.
+- Understanding birds' characteristics and visual appearance.
+- Understanding why these bird species are endangered.
+- Effortless input of the sightings.
+- Review of the logged-in sightings.
+- Providing additional information to the sightings.
+
 ### Site Owner goals
+
+- Bring awareness about endangered bird species to the public.
+- Explain which birds are endangered and why.
+- Involve volunteers for collaboration.
+- Monitor and leverage the data collected by volunteers.
+
 ### Development and Business Goals
 ### User Stories
 ### Design Choices
