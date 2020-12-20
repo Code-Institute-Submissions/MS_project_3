@@ -1,30 +1,61 @@
 # Save Birds
-<h1 align="center">
+<h1 class="align-center">
   <a href="https://git.heroku.com/bird-nl-project.git" target="_blank"><img src="static/images/DSC00283-01.jpeg" alt="Save Birds"/></a>
 </h1>
-<h2 align="center">
-<a href="https://git.heroku.com/bird-nl-project.git" alt="Save Birds - Your Volunteering Organization" ></a>
+
+<h2 class="align-center">
+    <a href="https://git.heroku.com/bird-nl-project.git" alt="Save Birds - Your Volunteering Organization" ></a>
 </h2>
 
-<div align="center"> 
-
- 
-[Save Birds](https://git.heroku.com/bird-nl-project.git) Birds population is rapidly descreaing worldwide. 
-We need volunteers' help to provide the number of the birds sightings in different areas.
-<br>
-
-[Save Birds](https://git.heroku.com/bird-nl-project.git)
-
+<div class="align-center">
+    [Save Birds](https://git.heroku.com/bird-nl-project.git) Birds population is rapidly descreaing worldwide. 
+    We need volunteers' help to provide the number of the birds sightings in different areas.
+    <br>
+    [Save Birds](https://git.heroku.com/bird-nl-project.git)
 </div>
+
+## Table of Contents
+1. [**UX**](#ux)
+    - [**Project Goals**](#project-goals)
+    - [**Visitor goals**](#visitor-goals)
+    - [**Site  owner goals**](#site-owner-goals)
+    - [**Developer and Business Goals**](#developer-and-Business-Goals)
+    - [**User stories**](#user-stories)
+    - [**Design choices**](#design-choices)
+    - [**Wireframes**](#wireframes)
+
+2. [**Features**](#features)
+    - [**Existing Features**](#existing-features)
+    - [**Features Left to Implement**](#features-left-to-implement)
+
+3. [**Technologies used**](#technologies-used)
+
+4. [**Testing**](#testing)
+
+5. [**Deployment**](#deployment)
+    - [**How to run this project locally**](#how-to-run-this-project-locally)
+
+6. [**Credits**](#credits)
+    - [**Content**](#content)
+    - [**Media**](#media)
+    - [**Code**](#code)
+    - [**Acknowledgements**](#acknowledgements)
+
+7. [**Disclaimer**](#disclaimer)
+
 
 ## UX
 
-Project goals
-Visitor goals
-Site Owners goals
-User Stories
-Design Stories
-Wireframes
+### Project goals
+
+
+
+### Visitor goals
+### Site Owner goals
+### Development and Business Goals
+### User Stories
+### Design Choices
+### Wireframes
  
 
 Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
@@ -96,6 +127,8 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 ### Media
 - The photos used in this site were obtained from ...
+
+### Code
 
 ### Acknowledgements
 
