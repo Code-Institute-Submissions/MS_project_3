@@ -28,6 +28,7 @@ $(document).ready(function()
         }
     });
 
+//Validation of incomplete input in form, taken from the Task lesson:
     validateMaterializeSelect();
     function validateMaterializeSelect() {
         let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };
@@ -74,3 +75,8 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+
+$(document).on('click', '#confirm-delete', function(){
+    return confirm('Are you sure you want to delete this?');
+})
