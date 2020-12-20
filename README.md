@@ -1,19 +1,19 @@
 # Save Birds
 <h1 align="center">
-  <a href="https://elena-pakhmurskaia.github.io/MS_project_3/" target="_blank"><img src="static/images/jumbotron.pdf" alt="Landing page"/></a>
+  <a href="https://git.heroku.com/bird-nl-project.git" target="_blank"><img src="static/images/DSC00283-01.jpeg" alt="Save Birds"/></a>
 </h1>
 <h2 align="center">
-<a href="https://elena-pakhmurskaia.github.io/MS_project_3/" target="_blank"><img src="static/images/jumbotron.pdf" alt="Save Birds - Your Volunteering Organization" ></a>
+<a href="https://git.heroku.com/bird-nl-project.git" alt="Save Birds - Your Volunteering Organization" ></a>
 </h2>
 
 <div align="center"> 
 
  
-[Save Birds](https://elena-pakhmurskaia.github.io/MS_project_3/) Birds population is rapidly descreaing worldwide. 
+[Save Birds](https://git.heroku.com/bird-nl-project.git) Birds population is rapidly descreaing worldwide. 
 We need volunteers' help to provide the number of the birds sightings in different areas.
 <br>
 
-[Save Birds](https://elena-pakhmurskaia.github.io/MS_project_3/)
+[Save Birds](https://git.heroku.com/bird-nl-project.git)
 
 </div>
 
