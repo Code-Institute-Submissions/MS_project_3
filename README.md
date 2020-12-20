@@ -1,17 +1,15 @@
-# Save Birds
-<h1 class="align-center">
-  <a href="https://git.heroku.com/bird-nl-project.git" target="_blank"><img src="static/images/DSC00283-01.jpeg" alt="Save Birds"/></a>
+<h1 align="center">
+  <a href="https://git.heroku.com/bird-nl-project.git">Save Birds</a>
 </h1>
 
-<h2 class="align-center">
-    <a href="https://git.heroku.com/bird-nl-project.git" alt="Save Birds - Your Volunteering Organization" ></a>
-</h2>
+<img src="/static/images/heroimage.jpg" alt="Landing Page"/>
 
-<div class="align-center">
-    [Save Birds](https://git.heroku.com/bird-nl-project.git) Birds population is rapidly descreaing worldwide. 
-    We need volunteers' help to provide the number of the birds sightings in different areas.
+<div align="center">
+    <h2>Birds population is rapidly descreaing worldwide. 
+    We need volunteers' help to provide the number of the birds sightings in different areas.</h2>
     <br>
-    [Save Birds](https://git.heroku.com/bird-nl-project.git)
+
+[Save Birds - Your Volunteering Organization](https://git.heroku.com/bird-nl-project.git)
 </div>
 
 ## Table of Contents
