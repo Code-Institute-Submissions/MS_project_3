@@ -56,7 +56,7 @@ def register():
         # register the new user 
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
-        return redirect(url_for('my_sightings', username=session["user"]))
+        return redirect(url_for('add_sightings', username=session["user"]))
     return render_template("register.html")
 
 
