@@ -18,7 +18,6 @@
     - [**Project Goals**](#project-goals)
     - [**Visitor goals**](#visitor-goals)
     - [**Site  owner goals**](#site-owner-goals)
-    - [**Developer and Business Goals**](#developer-and-Business-Goals)
     - [**User stories**](#user-stories)
     - [**Design choices**](#design-choices)
     - [**Wireframes**](#wireframes)
@@ -69,8 +68,30 @@ The main goal of the project is to provide an environment for volunteers to coll
 - Involve volunteers for collaboration.
 - Monitor and leverage the data collected by volunteers.
 
-### Development and Business Goals
 ### User Stories
+
+#### As a first time visitor I want:
+1. Understand whats the mission of the website and how I can contribute to it;
+2. Get a quick overview of which birds are endangered according to the guidance;
+3. If I am interested to learn more about a specific bird, I can click on the "learn more" button to receive additional information on preservation, physical description, and nesting;
+4. Jump on top of the list from the buttom;
+5. If I would like to collaborate, I can quickly register and provide my input.
+
+#### As a user of this website, I want:
+1. Have a quick login option to access my inputs;
+2. I want to directly jump to the "add sighting" page as this is my primary use of the website;
+3. While filling in the "add sighting" form, I want the form to highlight mandatory or incomplete input by underlining the fields green or red;
+4. Quick access to my records "my sightings";
+5. To edit my records and see new values right away;
+6. To delete a sighting if needed;
+7. Receive a prompt if I want to delete a sighting if I clicked on delete by mistake.
+
+#### As a site owner, I want to:
+1. Engage the first comers by explaining the mission of the website;
+2. Enable users to have a quick registration: on from page or on the registration page;
+3. Enable users to have quick and effortless data input on the "add sighting" page;
+4. Have a guided data input - to keep the integrity of the data high.
+
 ### Design Choices
 ### Wireframes
  
