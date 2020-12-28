@@ -2,7 +2,7 @@
   <a href="https://bird-nl-project.herokuapp.com/">Save Birds</a>
 </h1>
 
-<img src="/static/images/heroimage.jpg" alt="Landing Page"/>
+<img src="/static/images/heroimage.png" alt="Landing Page"/>
 
 <div align="center">
     <h2>Birds population is rapidly descreaing worldwide. 
@@ -51,7 +51,9 @@ The main goal of the project is to provide an environment for volunteers to coll
  - Professionals who have been working on collecting endangered species data but need external support.
 
 
-### Visitor goals
+### Visitors' goals
+
+Target audience - anyone who is interested in bird watching, wants to understand more about local species and contribute to the preservation of endangered birds by recording locations of their habitat. 
 
 - Clear contribution to the preservation of the natural environment.
 - Recognizing endangered birds in the local area.
@@ -61,7 +63,9 @@ The main goal of the project is to provide an environment for volunteers to coll
 - Review of the logged-in sightings.
 - Providing additional information to the sightings.
 
-### Site Owner goals
+### Site Owner's goals
+
+Target audience - local environmental organizations and ornithological institutions, who want to involve volunteers for educational and supporting purposes.
 
 - Bring awareness about endangered bird species to the public.
 - Explain which birds are endangered and why.
@@ -74,7 +78,7 @@ The main goal of the project is to provide an environment for volunteers to coll
 1. Understand whats the mission of the website and how I can contribute to it;
 2. Get a quick overview of which birds are endangered according to the guidance;
 3. If I am interested to learn more about a specific bird, I can click on the "learn more" button to receive additional information on preservation, physical description, and nesting;
-4. Jump on top of the list from the buttom;
+4. Jump on top of the list from the bottom;
 5. If I would like to collaborate, I can quickly register and provide my input.
 
 #### As a user of this website, I want:
@@ -91,17 +95,29 @@ The main goal of the project is to provide an environment for volunteers to coll
 2. Enable users to have a quick registration: on from page or on the registration page;
 3. Enable users to have quick and effortless data input on the "add sighting" page;
 4. Have a guided data input - to keep the integrity of the data high.
+5. Have a data extract in excel format when needed.
 
 ### Design Choices
+
+[Materialize](https://materializecss.com/about.html) version 1.0.0. was used in the project, namely:
+Card component for the styling of the bird images on the Home page;
+Navbar component for responsive navbar link - new or logged-out user has a different display if compared with the logged-in user.
+JS Parallax for the styling of the hero image.
+JS Collapsable for the styling of Add/Edit sighting
+Autocomplete Form for the styling of the Registration form.
+
+**Fonts**
+'Open Sans' sans-serif font was used as it's an easily readable font that matches the team of the website.
+
+**Icons**
+Feater icon was used for the navigation to home page [Font Awesome](https://fontawesome.com/icons/feather)
+
+**Colors**
+[Materialize](https://materializecss.com/color.html) teal-darken pallet was used for styling of the website and contrasting orange darken-4 from Materialize for the styling of the "jump on the top feature".
+
 ### Wireframes
  
 
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
-
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
-
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
 
 ## Features
 
@@ -120,10 +136,21 @@ In addition, you may also use this section to discuss plans for additional featu
 
 ## Technologies Used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
-
 - [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
+
+
+- HTML5, CSS3, JavaScript, Python programming languages
+- [JQuery](https://jquery.com) is used to initialize the Materialize components.
+- [Materialize](https://materializecss.com/about.html) front-end framework for responsive websites.
+- [Flask]() - Python microframework Flask is used to create this project.
+- [Jinja]() - Jinja templating language is used with Flask in the HTML code.
+- [Balsamiq]() - Balsamiq is used to create wireframes for the project.
+- [PyMongo]() - Python toolkit to work with MongoDB.
+- [MongoDB]() - NoSQL database to store data at the backend.
+- [Google_Fonts]() - Google fonts Balsamiq Sans and Krona One are used in the project.
+- [Git&Github]() - Used for version control.
+- [Heroku]() - It is used as a hosting platform to deploy the project.
+- [HTML_Formatter]() - Used to format and beautify my code.
 
 
 ## Testing
