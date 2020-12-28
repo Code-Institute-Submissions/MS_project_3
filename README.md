@@ -160,47 +160,47 @@ Target audience - local environmental organizations and ornithological instituti
 
 **As a first-time visitor I want:**
 1. Understand whats the mission of the website and how I can contribute to it.
-Testing: Go to Home Page - Read a paragraph under the hero image.
+- Testing: Go to Home Page - Read a paragraph under the hero image.
 2. Get a quick overview of which birds are endangered according to the guidance.
-Testing:  Go to Home Page - Scroll down for the list of the endangered birds.
+- Testing:  Go to Home Page - Scroll down for the list of the endangered birds.
 3. If I am interested to learn more about a specific bird, I can click on the "learn more" button to receive additional information on preservation, physical description, and nesting.
-Testing:  Go to Home Page - Choose a bird of interest - Find "Learn more" under the image and description - Click on a link - The page with explicit information about this bird will be displayed.
+- Testing:  Go to Home Page - Choose a bird of interest - Find "Learn more" under the image and description - Click on a link - The page with explicit information about this bird will be displayed.
 4. Jump on top of the list from the bottom.
-Testing:  Go to Home Page - Scroll down the page - Orange button "Top" will be displayed on the right side of the screen - Click on "Top" button - It will take you to the very top of the page
+- Testing:  Go to Home Page - Scroll down the page - Orange button "Top" will be displayed on the right side of the screen - Click on "Top" button - It will take you to the very top of the page
 5. If I would like to collaborate, I can quickly register and provide my input.
-Testing:  Go to Home Page - Hero Image has a register button - Click on "Register button" - You will be redirected to the "Register" form:
-Try to input username/password shorter than 6 characters: you will see that the field is highlighted in red and a helper msg appears "Too short, min 6 characters"
-Try to input an already existing username: you won't be able to do it, you will receive a msg "Username already exists" 
+- Testing: Go to Home Page - Hero Image has a register button - Click on "Register button" - You will be redirected to the "Register" form:
+a. Try to input username/password shorter than 6 characters: you will see that the field is highlighted in red and a helper msg appears "Too short, min 6 characters"
+b. Try to input an already existing username: you won't be able to do it, you will receive a msg "Username already exists" 
 
 **As a user of this website, I want:**
 1. Have a quick login option to access my inputs.
-Testing: Go to Home Page - Click "Log in" - Input your username and password 
-- If the password or username is less than 6 characters, you will see the helper msg "Too short, min 6 characters" 
-- If the password or username is valid but doesn't exist flash msg appears "The username or password doesn't exist".
+- Testing: Go to Home Page - Click "Log in" - Input your username and password 
+a. If the password or username is less than 6 characters, you will see the helper msg "Too short, min 6 characters" 
+b. If the password or username is valid but doesn't exist flash msg appears "The username or password doesn't exist".
 2. I want to directly jump to the "add sighting" page as this is my primary use of the website.
-Testing: Go to Home Page - Click "Log in" - Input your username and password - you will be redirected to "Add Sighting" page.
+- Testing: Go to Home Page - Click "Log in" - Input your username and password - you will be redirected to "Add Sighting" page.
 3. While filling in the "add sighting" form, I want the form to highlight mandatory or incomplete input by underlining the fields green or red.
-Testing: Go to "Add Sighting" page - Try to leave a field empty - Form will be highlighted in red.
+- Testing: Go to "Add Sighting" page - Try to leave a field empty - Form will be highlighted in red.
 4. Quick access to my records "My sightings". 
-Testing: Go to Home Page - Click "Log in" - Input your username and password - You will have "My sightings" in a dropdown "Sightings".
+- Testing: Go to Home Page - Click "Log in" - Input your username and password - You will have "My sightings" in a dropdown "Sightings".
 5. To edit my records and see new values right away;
-Testing: Go to My Sighting Page - Click "Edit" - Try to change input in the fields - New value will appear right away.
+- Testing: Go to My Sighting Page - Click "Edit" - Try to change input in the fields - New value will appear right away.
 6. To delete a sighting if needed.
-Testing: Go to My Sighting Page - Click "Delete" - Pop up will arrear "Are you sure you want to delete this sighting?"- Click Ok to confirm or Click Cancel to keep the record.
+- Testing: Go to My Sighting Page - Click "Delete" - Pop up will arrear "Are you sure you want to delete this sighting?"- Click Ok to confirm or Click Cancel to keep the record.
 
 **As a site owner, I want to:**
 1. Engage the first comers by explaining the mission of the website.
-Testing: Go to Home Page - Read a paragraph under the hero image.
+- Testing: Go to Home Page - Read a paragraph under the hero image.
 2. Enable users to have a quick registration: on from page or on the registration page.
-Testing:  Go to Home Page - Hero Image has a register button - Click on "Register button" - You will be redirected to the "Register" form:
-Try to input username/password shorter than 6 characters: you will see that the field is highlighted in red and a helper msg appears "Too short, min 6 characters"
-Try to input an already existing username: you won't be able to do it, you will receive a msg "Username already exists"
+- Testing:  Go to Home Page - Hero Image has a register button - Click on "Register button" - You will be redirected to the "Register" form:
+a. Try to input username/password shorter than 6 characters: you will see that the field is highlighted in red and a helper msg appears "Too short, min 6 characters"
+b. Try to input an already existing username: you won't be able to do it, you will receive a msg "Username already exists"
 3. Enable users to have quick and effortless data input on the "add sighting" page.
-Testing: Go to Home page - Login - Go to Add Sighting - Choose the input data from the dropdowns and datepicker- Click "Add"
+- Testing: Go to Home page - Login - Go to Add Sighting - Choose the input data from the dropdowns and datepicker- Click "Add"
 4. Have a guided data input - to keep the integrity of the data high.
-Testing: Go to Home page - Login - Go to Add Sighting - Choose the input data from the dropdowns and datepicker- the input is guided and users cannot enter invalid data.
+- Testing: Go to Home page - Login - Go to Add Sighting - Choose the input data from the dropdowns and datepicker- the input is guided and users cannot enter invalid data.
 5. Have a data extract when needed.
-Testing: [MongoDB documentation](https://docs.mongodb.com/compass/current/import-export)
+- Testing: [MongoDB documentation](https://docs.mongodb.com/compass/current/import-export)
 
 **Different browsers & Mobile' Screens**
 The website looks fine and works properly on the following web browsers and mobiles when tested on them.
