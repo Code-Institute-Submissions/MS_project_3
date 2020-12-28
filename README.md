@@ -122,8 +122,6 @@ Feater icon was used for the navigation to home page [Font Awesome](https://font
 
 
 ## Features
-
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
  
 ### Existing Features
 1. **Navigation Bar** displays pages based on the status of the user: if the user is registered and logged-in - "My Sightings" & "Add Sightings" are visible to this user; if its a new user or a logged-out user - "Register" and "Log In" are visible to this user.
@@ -139,7 +137,11 @@ In this section, you should go over the different parts of your project, and des
 10. **Cancel** - is displayed on the Edit page and allows a user to go back to the "My Sightings" page. 
 
 ### Features Left to Implement
-- Another feature idea
+
+1. **Integration with Google API** users can pass current location into a database to create a better idea of where the bird was seen;
+2. **Social Media Sharing** added sighting can be shared with the community of volunteers;
+3. **Image Upload** add to the optional data input if a volunteer wants to share an image of the bird with the sighting information. 
+
 
 ## Technologies Used
 
