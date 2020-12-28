@@ -40,9 +40,6 @@
     - [**Code**](#code)
     - [**Acknowledgements**](#acknowledgements)
 
-7. [**Disclaimer**](#disclaimer)
-
-
 ## UX
 
 ### Project goals
@@ -142,7 +139,6 @@ Target audience - local environmental organizations and ornithological instituti
 2. **Social Media Sharing** added sighting can be shared with the community of volunteers;
 3. **Image Upload** add to the optional data input if a volunteer wants to share an image of the bird with the sighting information. 
 
-
 ## Technologies Used
 
 - [JQuery](https://jquery.com) for enabling Materialize responsive elements.
@@ -157,7 +153,6 @@ Target audience - local environmental organizations and ornithological instituti
 - [Git&Github](https://github.com/) - Used for version control.
 - [Heroku](https://www.heroku.com/#) - hosting platform tfor project deployment.
 - [HTML_Formatter](https://webformatter.com/html) - Used to formatting and beautifing the code.
-
 
 ## Testing
 
@@ -215,7 +210,6 @@ The website looks fine and works properly on the following web browsers and mobi
 - iPhone all models
 - Samsung old model
 
-
 ## Deployment
 
 ### Local Deployment
@@ -253,25 +247,23 @@ The website looks fine and works properly on the following web browsers and mobi
 17. It will take a minute and display a message that Your app was successfully deployed.
 18. Click on View to launch your deployed app.
 
+**Code Validation**
+The code has been validated by using;
+- [W3C Markup Validation Service for HTML](https://webformatter.com/html)
+- [W3C Markup Validation Service for CSS](https://webformatter.com/css)
+- [Pep8 Online for Python](http://pep8online.com/checkresult)
+
 
 ## Credits
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+- The text for the Home page was copied from the [Earth Endangered.com](http://www.earthsendangered.com/search-regions3.asp?mp=&search=1&sgroup=allgroups&ID=557) for the list of endangered birds in the Netherlands.
 
 ### Media
-- The photos used in this site were obtained from ...
-
-### Code
-
-**Code Validation**
-The code has been validated by using;
-- W3C Markup Validation Service for HTML
-- W3C Markup Validation Service for CSS
-- Pep8 Online for Python
-
-**Interesting Bugs / Issues**
+- The photos used in this site were obtained from different free online resources.
+- Hero image belongs to my friend.
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+- I received inspiration for this project from a Task manager project.
+- Central Park app that is used for collecting bird sightings in Central Park area, NY.
