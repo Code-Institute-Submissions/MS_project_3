@@ -11,7 +11,7 @@
                         <i class="material-icons prefix">account_circle</i>
                         <input id="username" name="username" type="text" maxlength="15" minlength="6" pattern="^[a-zA-Z0-9]{6,15}$" class="validate" required>
                         <label for="username">First Name</label>
-                        <span>Please choose at least 6 letters and/or numbers to create a password</span>
+                        <span class="helper-text" data-error="Too short, min 6 characters" data-success="Your username is valid">Please choose at least 6 letters and/or numbers to create a password</span>
                     </div>
                 </div>
 <!--Password-->
@@ -20,7 +20,7 @@
                          <i class="material-icons prefix">vpn_key</i>
                         <input id="password" name="password" type="password" maxlength="15" minlength="6" pattern="^[a-zA-Z0-9]{6,15}$" class="validate" required>
                         <label for="password">Password</label>
-                        <span class="helper-text" data-error="wrong" data-success="right">Please choose at least 6 letters and/or numbers to create a password</span>
+                        <span class="helper-text" data-error="Too short, min 6 characters" data-success="Your password is valid">Please choose at least 6 letters and/or numbers to create a password</span>
                     </div>
                 </div>
 <!--Log In-->
