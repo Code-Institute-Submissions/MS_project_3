@@ -1,49 +1,48 @@
-{% extends 'base.html' %} 
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
 <h3>Add Sighting</h3>
 
 <!--chooce bird-->
-  <div class="row">
+<div class="row">
     <form class="col s12" method="POST" action="{{url_for('add_sightings')}}">
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">create</i>
                 <select id="name" type="text" name="name" class="validate" required>
                     <option value="" disabled selected>Choose the Bird</option>
-                {% for endangered_bird in endangered_birds %}
-                
+                    {% for endangered_bird in endangered_birds %}
+
                     <option value="{{ endangered_bird.name }}">{{ endangered_bird.name }}</option>
 
-                {% endfor %}
+                    {% endfor %}
                 </select>
                 <label for="name"></label>
             </div>
         </div>
-<!--Location-->
+        <!--Location-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">place</i>
                 <select id="location" type="text" name="location" class="validate" required>
                     <option value="" disabled selected>Choose the Location</option>
-                {% for location in locations %}
+                    {% for location in locations %}
 
                     <option value="{{ location.city }}">{{ location.city }}</option>
 
-                {% endfor %}              
+                    {% endfor %}
                 </select>
                 <label for="location"></label>
             </div>
         </div>
-<!--Choose date-->
+        <!--Choose date-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">event</i>
-                <input id="date" name="date" type="text" class="datepicker validate" required>
+                <input id="date" name="date" type="text" class="datepicker validate" required />
                 <label for="date">Choose the Date</label>
             </div>
         </div>
-<!--Comment-->
+        <!--Comment-->
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">comment</i>
@@ -51,13 +50,13 @@
                 <label for="comment">Write Your Comment</label>
             </div>
         </div>
-<!--Submit button-->
+        <!--Submit button-->
         <div class="row">
             <div class="col s12 center-align">
                 <button type="submit" id="all-btns" class="btn-large">Add</button>
             </div>
         </div>
     </form>
-  </div>
+</div>
 
 {% endblock %}

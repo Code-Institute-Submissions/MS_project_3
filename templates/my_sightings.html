@@ -1,33 +1,29 @@
-{% extends 'base.html' %} 
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
 <h3 class="center-align">My Sightings</h3>
 
-{% for sighting in sightings%}
-{% if session.user|lower == sighting.created_by|lower %}
-  <ul class="collapsible">
+{% for sighting in sightings%} {% if session.user|lower == sighting.created_by|lower %}
+<ul class="collapsible">
     <li>
-    <div id="collapsible-margin" class="teal lighten-5 collapsible-header"><i class="material-icons">expand_more</i>
-        <h6>{{ sighting.name }}: {{ sighting.location }}</h6>
-    </div>
-    <div class="collapsible-body">
-        <ul>
-            <li>{{ sighting.date }}</li>
-            <li>{{ sighting.comment}}</li>
-        </ul>
-    </div>
-    <div class="row">
-        <div class="col s6 center-align">
-            <a href="{{ url_for('edit_sighting', sighting_id=sighting._id) }}" id="all-btns" class="btn-large">Edit</a>
+        <div id="collapsible-margin" class="teal lighten-5 collapsible-header">
+            <i class="material-icons">expand_more</i>
+            <h6>{{ sighting.name }}: {{ sighting.location }}</h6>
         </div>
-        <div class="col s6 center-align">
-            <a href="{{ url_for('delete_sighting', sighting_id=sighting._id) }}" id="all-btns" class="btn-large" id="confirm-delete" onclick="return confirm('Are you sure you want to delete this sighting?')">Delete</a>
+        <div class="collapsible-body">
+            <ul>
+                <li>{{ sighting.date }}</li>
+                <li>{{ sighting.comment}}</li>
+            </ul>
         </div>
-    </div>
+        <div class="row">
+            <div class="col s6 center-align">
+                <a href="{{ url_for('edit_sighting', sighting_id=sighting._id) }}" id="all-btns" class="btn-large">Edit</a>
+            </div>
+            <div class="col s6 center-align">
+                <a href="{{ url_for('delete_sighting', sighting_id=sighting._id) }}" id="all-btns" class="btn-large" id="confirm-delete" onclick="return confirm('Are you sure you want to delete this sighting?')">Delete</a>
+            </div>
+        </div>
     </li>
-  </ul>
+</ul>
 
-{% endif %}
-{% endfor %}
-
-{% endblock %}
+{% endif %} {% endfor %} {% endblock %}

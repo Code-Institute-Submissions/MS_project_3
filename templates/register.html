@@ -1,45 +1,44 @@
-  {% extends 'base.html' %} 
-  {% block content %}
-  <h3 class="center-align">Registration Form</h3>
+{% extends 'base.html' %} {% block content %}
+<h3 class="center-align">Registration Form</h3>
 
-    <div class="row">
-        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
-            <div class="card-panel">
-<!--User name-->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">account_circle</i>
-                        <input id="username" name="username" type="text" maxlength="15" minlength="6" pattern="^[a-zA-Z0-9]{6,15}$" class="validate" required>
-                        <label for="username">First Name</label>
-                        <span class="helper-text" data-error="Too short, min 6 characters" data-success="Your username is valid">Please choose at least 6 letters and/or numbers to create a password</span>
-                    </div>
-                </div>
-<!--Password-->
-                <div class="row">
-                    <div class="input-field col s12">
-                         <i class="material-icons prefix">vpn_key</i>
-                        <input id="password" name="password" type="password" maxlength="15" minlength="6" pattern="^[a-zA-Z0-9]{6,15}$" class="validate" required>
-                        <label for="password">Password</label>
-                        <span class="helper-text" data-error="Too short, min 6 characters" data-success="Your password is valid">Please choose at least 6 letters and/or numbers to create a password</span>
-                    </div>
-                </div>
-<!--Log In-->
-                <div class="row">
-                    <div class="col s12 center-align">
-                        <button type="submit" id="all-btns" class="btn-large">Register</button>
-                    </div>
+<div class="row">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+        <div class="card-panel">
+            <!--User name-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="username" name="username" type="text" maxlength="15" minlength="6" pattern="^[a-zA-Z0-9]{6,15}$" class="validate" required />
+                    <label for="username">First Name</label>
+                    <span class="helper-text" data-error="Too short, min 6 characters" data-success="Your username is valid">Please choose at least 6 letters and/or numbers to create a username</span>
                 </div>
             </div>
-        </form>
-    </div>
-
-
-    <div class="row">
-        <div class="col s12">
-            <p class="center-align">Already Registered?
-                <a href="{{ url_for('login') }}">Log In</a>
-            </p>
+            <!--Password-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">vpn_key</i>
+                    <input id="password" name="password" type="password" maxlength="15" minlength="6" pattern="^[a-zA-Z0-9]{6,15}$" class="validate" required />
+                    <label for="password">Password</label>
+                    <span class="helper-text" data-error="Too short, min 6 characters" data-success="Your password is valid">Please choose at least 6 letters and/or numbers to create a password</span>
+                </div>
+            </div>
+            <!--Log In-->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button type="submit" id="all-btns" class="btn-large">Register</button>
+                </div>
+            </div>
         </div>
-    </div>
+    </form>
+</div>
 
-  {% endblock %}
+<div class="row">
+    <div class="col s12">
+        <p class="center-align">
+            Already Registered?
+            <a href="{{ url_for('login') }}">Log In</a>
+        </p>
+    </div>
+</div>
+
+{% endblock %}

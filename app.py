@@ -24,7 +24,8 @@ mongo = PyMongo(app)
 @app.route("/index")
 def index():
     endangered_birds = list(mongo.db.endangered_birds.find())
-    return render_template("index.html", endangered_birds=endangered_birds)
+    return render_template("index.html",
+        endangered_birds=endangered_birds)
 
 
 @app.route("/view_bird/<bird_id>")
@@ -32,7 +33,8 @@ def view_bird(bird_id):
     endangered_bird = mongo.db.endangered_birds.find_one(
         {"_id": ObjectId(bird_id)})
 
-    return render_template("endangered_bird.html", endangered_bird=endangered_bird)
+    return render_template("endangered_bird.html",
+        endangered_bird=endangered_bird)
 
 
 #register page
@@ -53,7 +55,7 @@ def register():
         }
         mongo.db.users.insert_one(register)
 
-        # register the new user 
+#register the new user
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
         return redirect(url_for('add_sightings', username=session["user"]))
@@ -75,19 +77,16 @@ def login():
                     session["user"] = request.form.get("username").lower()
                     flash("Welcome, {}".format(
                         request.form.get("username")))
-                    return redirect(url_for(
-                        'add_sightings', username=session["user"]))
-
+                    return redirect(url_for('add_sightings',
+                        username=session["user"]))
             else:
-                # invalid password 
+                #invalid password
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
-
         else:
             # username doesn't exist
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
-
     return render_template("login.html")
 
 
@@ -109,7 +108,7 @@ def my_sightings():
 @app.route("/add_sightings", methods=["GET", "POST"])
 def add_sightings():
     if request.method == "POST":
-        sightings ={
+        sightings = {
             "name": request.form.get("name"),
             "location": request.form.get("location"),
             "date": request.form.get("date"),
@@ -121,13 +120,14 @@ def add_sightings():
 
     bird_name = mongo.db.endangered_birds.find()
     city = mongo.db.locations.find()
-    return render_template("add_sightings.html", endangered_birds=bird_name, locations=city)
+    return render_template("add_sightings.html",
+        endangered_birds=bird_name, locations=city)
 
 
 @app.route("/edit_sighting/<sighting_id>", methods=["GET", "POST"])
 def edit_sighting(sighting_id):
     if request.method == "POST":
-        update ={
+        update = {
             "name": request.form.get("name"),
             "location": request.form.get("location"),
             "date": request.form.get("date"),
@@ -140,7 +140,8 @@ def edit_sighting(sighting_id):
     sighting = mongo.db.sightings.find_one({"_id": ObjectId(sighting_id)})
     bird_name = mongo.db.endangered_birds.find()
     city = mongo.db.locations.find()
-    return render_template("edit_sightings.html", sighting=sighting, endangered_birds=bird_name, locations=city)
+    return render_template("edit_sightings.html",
+        sighting=sighting, endangered_birds=bird_name, locations=city)
 
 
 @app.route("/delete_sighting/<sighting_id>")

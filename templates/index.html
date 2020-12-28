@@ -1,62 +1,62 @@
-{% extends 'base.html' %} 
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
 <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center white-text text-darken-2">SAVE BIRDS</h1>
-        <div class="row center">
-          <a href="{{ url_for('register')}}" id="register-btn" class="btn-large teal darken-4 bold">Register Today</a>
-        </div>
-        <br><br>
-
-      </div>
-    </div>
-    <div class="parallax"><img src="static/images/DSC00215-02.jpeg" alt="Unsplashed background img 1" style="transform: translate3d(-50%, 259.085px, 0px); opacity: 1;"></div>
-  </div>
-
-
-    <div class="row">
-        <div class="col 12">
-            <h4>Our Mission</h4>
-        </div>
-        <div class="col 12">
-                <p>Birds population is rapidly descreaing worldwide. We need volunteers' help to provide the number of the birds sightings in different areas.
-                Use the IUCN Red List of Endangered Species (IUCN) guidance to see which birds need your immediate attention:</p>
+        <div class="container">
+            <br />
+            <br />
+            <h1 class="header center white-text text-darken-2">SAVE BIRDS</h1>
+            <div class="row center">
+                <a href="{{ url_for('register')}}" id="register-btn" class="btn-large teal darken-4 bold">Register Today</a>
+            </div>
+            <br />
+            <br />
         </div>
     </div>
-    <div class="row">
-        <div class="col 12">
-            <ul class="list-items">
-                <li><i class="fas fa-feather"></i> Critically Endangered (CR-IUCN)</li>
-                <li><i class="fas fa-feather"></i> Endangered (EN-IUCN)</li>
-                <li><i class="fas fa-feather"></i> Extinct in the Wild (EW-IUCN)</li>
-                <li><i class="fas fa-feather"></i> Vulnerable (VU-IUCN)</li>
-                <li><i class="fas fa-feather"></i> Near Threatened (NT-IUCN)</li>
-            </ul>
-        </div>
+    <div class="parallax"><img src="static/images/DSC00215-02.jpeg" alt="Unsplashed background img 1" style="transform: translate3d(-50%, 259.085px, 0px); opacity: 1;" /></div>
+</div>
+
+<div class="row">
+    <div class="col 12">
+        <h4>Our Mission</h4>
     </div>
+    <div class="col 12">
+        <p>
+            Birds population is rapidly descreaing worldwide. We need volunteers' help to provide the number of the birds sightings in different areas. Use the IUCN Red List of Endangered Species (IUCN) guidance to see which birds need your
+            immediate attention:
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col 12">
+        <ul class="list-items">
+            <li><i class="fas fa-feather"></i> Critically Endangered (CR-IUCN)</li>
+            <li><i class="fas fa-feather"></i> Endangered (EN-IUCN)</li>
+            <li><i class="fas fa-feather"></i> Extinct in the Wild (EW-IUCN)</li>
+            <li><i class="fas fa-feather"></i> Vulnerable (VU-IUCN)</li>
+            <li><i class="fas fa-feather"></i> Near Threatened (NT-IUCN)</li>
+        </ul>
+    </div>
+</div>
 
-
-    <div class="row">
-{% for endangered_bird in endangered_birds %}
-        <div class="col 12">
-            <div class="card">
-                <div class="card-image">
-                    <img src="{{ endangered_bird.image }}">
-                </div>
-                <div class="teal lighten-5 card-content">                    
-                    <span id="card-title" class="card-title text-shadow">{{ endangered_bird.name }}</span>
-                    <p>{{ endangered_bird.short_description}}</p>
-                </div>
-                <div class="teal darken-4 card-action center">
-                    <a id="index-links" href="{{ url_for('view_bird', bird_id=endangered_bird._id)}}">Learn More</a>
-                </div>
+<div class="row">
+    {% for endangered_bird in endangered_birds %}
+    <div class="col 12">
+        <div class="card">
+            <div class="card-image">
+                <img src="{{ endangered_bird.image }}" />
+            </div>
+            <div class="teal lighten-5 card-content">
+                <span id="card-title" class="card-title text-shadow">{{ endangered_bird.name }}</span>
+                <p>{{ endangered_bird.short_description}}</p>
+            </div>
+            <div class="teal darken-4 card-action center">
+                <a id="index-links" href="{{ url_for('view_bird', bird_id=endangered_bird._id)}}">Learn More</a>
             </div>
         </div>
-{% endfor %}
     </div>
+    {% endfor %}
+</div>
 <button onclick="topFunction()" id="top-btn" title="Go to top">Top</button>
 
 {% endblock %}

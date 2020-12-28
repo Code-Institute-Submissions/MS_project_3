@@ -1,28 +1,26 @@
-{% extends 'base.html' %} 
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
 <div class="row">
     <div id="bird-image" class="col s12">
-        <img class="materialboxed" width="100%" src="{{ endangered_bird.image }}" alt="Profile image for {{ endangered_bird.name }}">
+        <img class="materialboxed" width="100%" src="{{ endangered_bird.image }}" alt="Profile image for {{ endangered_bird.name }}" />
     </div>
     <div class="col s12">
         <h4>{{ endangered_bird.name }}</h4>
     </div>
 </div>
-<hr>
-    <div class="col s12">
-        <h5>Description</h5>
-            <p id="bird-text">{{ endangered_bird.description }}</p>
-        <h5>Habitat</h5>
-            <p id="bird-text">{{ endangered_bird.habitat }}</p>
-        <h5>Behaviour</h5>
-            <p id="bird-text">{{ endangered_bird.behaviour }}</p>
-        <h5>Conservation</h5>
-            <p id="bird-text">{{ endangered_bird.conservation }}</p>
-        </div>
+<hr />
+<div class="col s12">
+    <h5>Description</h5>
+    <p id="bird-text">{{ endangered_bird.description }}</p>
+    <h5>Habitat</h5>
+    <p id="bird-text">{{ endangered_bird.habitat }}</p>
+    <h5>Behaviour</h5>
+    <p id="bird-text">{{ endangered_bird.behaviour }}</p>
+    <h5>Conservation</h5>
+    <p id="bird-text">{{ endangered_bird.conservation }}</p>
 </div>
 
-<hr>
+<hr />
 
 <button onclick="topFunction()" id="top-btn" title="Go to top">Top</button>
 

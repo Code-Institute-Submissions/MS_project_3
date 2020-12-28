@@ -2,7 +2,7 @@
   <a href="https://bird-nl-project.herokuapp.com/">Save Birds</a>
 </h1>
 
-<img src="/static/images/heroimage.png" alt="Landing Page"/>
+<div><img src="/static/images/heroimage.png" alt="Landing Page"/><a href="https://bird-nl-project.herokuapp.com/">Save Birds</a></div>
 
 <div align="center">
     <h2>Birds population is rapidly descreaing worldwide. 
@@ -108,13 +108,13 @@ Target audience - local environmental organizations and ornithological instituti
 - JS Collapsable for the styling of Add/Edit sighting
 - Autocomplete Form for the styling of the Registration form.
 
-**Fonts**
+**Fonts:**
 'Open Sans' sans-serif font was used as it's an easily readable font that matches the team of the website.
 
-**Icons**
-Feater icon was used for the navigation to home page [Font Awesome](https://fontawesome.com/icons/feather)
+**Icons:**
+[Font Awesome](https://fontawesome.com/icons/feather) feather icon was used for the navigation to home page 
 
-**Colors**
+**Colors:**
 [Materialize](https://materializecss.com/color.html) teal-darken pallet was used for styling of the website and contrasting orange darken-4 from Materialize for the styling of the "jump on the top feature".
 
 ### Wireframes
@@ -154,10 +154,9 @@ Feater icon was used for the navigation to home page [Font Awesome](https://font
 - [Balsamiq](https://balsamiq.com/) - Balsamiq is used to create wireframes for the project.
 - [PyMongo](https://pymongo.readthedocs.io/en/stable/) - Python toolkit to work with MongoDB.
 - [MongoDB](https://www.mongodb.com/2) - NoSQL database to store data at the backend.
-- [Google_Fonts](https://fonts.google.com/) - Google fonts Balsamiq Sans and Krona One are used in the project.
 - [Git&Github](https://github.com/) - Used for version control.
-- [Heroku](https://www.heroku.com/#) - It is used as a hosting platform to deploy the project.
-- [HTML_Formatter](https://webformatter.com/html) - Used to format and beautify my code.
+- [Heroku](https://www.heroku.com/#) - hosting platform tfor project deployment.
+- [HTML_Formatter](https://webformatter.com/html) - Used to formatting and beautifing the code.
 
 
 ## Testing
@@ -232,8 +231,8 @@ The website looks fine and works properly on the following web browsers and mobi
 
 ### Heroku Deployment
 
-[Save Birds live page](http://bird-nl-project.herokuapp.com/)
-[Save Birds Github Repository](Elena-Pakhmurskaia/MS_project_3)
+- [Save Birds live page](http://bird-nl-project.herokuapp.com/)
+- [Save Birds Github Repository](Elena-Pakhmurskaia/MS_project_3)
 
 1. Login to your Heroku account.
 2. Click on New at the right top corner and click on Create new app.
@@ -265,12 +264,13 @@ The website looks fine and works properly on the following web browsers and mobi
 
 ### Code
 
-Code Validation
+**Code Validation**
 The code has been validated by using;
-W3C Markup Validation Service for HTML
-W3C Markup Validation Service for CSS
-Pep8 Online for Python
-Interesting Bugs / Issue
+- W3C Markup Validation Service for HTML
+- W3C Markup Validation Service for CSS
+- Pep8 Online for Python
+
+**Interesting Bugs / Issues**
 
 ### Acknowledgements
 
