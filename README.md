@@ -2,13 +2,14 @@
   <a href="https://bird-nl-project.herokuapp.com/">Save Birds</a>
 </h1>
 
-<div><img src="/static/images/heroimage.png" alt="Landing Page"/><a href="https://bird-nl-project.herokuapp.com/">Save Birds</a></div>
+<a href="https://bird-nl-project.herokuapp.com/><img src="/static/images/heroimage.png" alt="Landing Page"></a>
 
 <div align="center">
     <h2>Birds population is rapidly descreaing worldwide. 
     We need volunteers' help to provide the number of the birds sightings in different areas.</h2>
 
 [Save Birds - Your Volunteering Organization](https://bird-nl-project.herokuapp.com/)
+
 </div>
 
 <br>
@@ -116,7 +117,7 @@ Target audience - local environmental organizations and ornithological instituti
 
 ### Wireframes
  
-
+[Project wireframes](https://drive.google.com/file/d/1yvNdCMHJXe1DSxMGuMWXAYShJXdLhfA-/view?usp=sharing)
 
 ## Features
  
@@ -151,7 +152,7 @@ Target audience - local environmental organizations and ornithological instituti
 - [PyMongo](https://pymongo.readthedocs.io/en/stable/) - Python toolkit to work with MongoDB.
 - [MongoDB](https://www.mongodb.com/2) - NoSQL database to store data at the backend.
 - [Git&Github](https://github.com/) - Used for version control.
-- [Heroku](https://www.heroku.com/#) - hosting platform tfor project deployment.
+- [Heroku](https://www.heroku.com/#) - hosting platform for project deployment.
 - [HTML_Formatter](https://webformatter.com/html) - Used to formatting and beautifing the code.
 
 ## Testing
@@ -219,7 +220,7 @@ The website looks fine and works properly on the following web browsers and mobi
 3. A drop-down menu opens, then click on Download Zip
 4. Unzip the downloaded zip file.
 5. Open app.py file and install requirements.txt by running command pip3 install -r requirements.txt.
-6. Create a database in MongoDB following this structure - ADD PDF
+6. Create a database in MongoDB following [this structure](https://drive.google.com/file/d/1xN68ztYov32Cq-3VdMJXLS0puXD7WRg8/view?usp=sharing)
 7. Create env.py file and add MONGO_URI and SECRET_KEY.
 8. Now run the app.py by running code python3 app.py
 
