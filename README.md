@@ -40,7 +40,6 @@
 6. [**Credits**](#credits)
     - [**Content**](#content)
     - [**Media**](#media)
-    - [**Code**](#code)
     - [**Acknowledgements**](#acknowledgements)
 
 ## UX
@@ -52,7 +51,7 @@ The main goal of the project is to provide an environment for volunteers to coll
 - Professionals who have been working on collecting endangered species data but need external support.
 
 
-### Visitors' goals
+### Visitor goals
 
 Target audience - anyone who is interested in bird watching, wants to understand more about local species and contribute to the preservation of endangered birds by recording locations of their habitat. 
 
@@ -64,7 +63,7 @@ Target audience - anyone who is interested in bird watching, wants to understand
 - Review of the logged-in sightings.
 - Providing additional information to the sightings.
 
-### Site Owner's goals
+### Site Owner goals
 
 Target audience - local environmental organizations and ornithological institutions, who want to involve volunteers for educational and supporting purposes.
 
@@ -251,7 +250,7 @@ The website looks fine and works properly on the following web browsers and mobi
 18. Click on View to launch your deployed app.
 
 **Code Validation**
-The code has been validated by using;
+The code has been validated by using:
 - [W3C Markup Validation Service for HTML](https://webformatter.com/html)
 - [W3C Markup Validation Service for CSS](https://webformatter.com/css)
 - [Pep8 Online for Python](http://pep8online.com/checkresult)
