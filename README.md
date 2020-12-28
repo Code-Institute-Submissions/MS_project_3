@@ -31,7 +31,8 @@
 4. [**Testing**](#testing)
 
 5. [**Deployment**](#deployment)
-    - [**How to run this project locally**](#how-to-run-this-project-locally)
+    - [**Heroku Deployment**](#heroku-deployment)
+    - [**Local Deployment**](#local-deployment)
 
 6. [**Credits**](#credits)
     - [**Content**](#content)
@@ -100,11 +101,12 @@ Target audience - local environmental organizations and ornithological instituti
 ### Design Choices
 
 [Materialize](https://materializecss.com/about.html) version 1.0.0. was used in the project, namely:
-Card component for the styling of the bird images on the Home page;
-Navbar component for responsive navbar link - new or logged-out user has a different display if compared with the logged-in user.
-JS Parallax for the styling of the hero image.
-JS Collapsable for the styling of Add/Edit sighting
-Autocomplete Form for the styling of the Registration form.
+
+- Card component for the styling of the bird images on the Home page;
+- Navbar component for responsive navbar link - new or logged-out user has a different display if compared with the logged-in user.
+- JS Parallax for the styling of the hero image.
+- JS Collapsable for the styling of Add/Edit sighting
+- Autocomplete Form for the styling of the Registration form.
 
 **Fonts**
 'Open Sans' sans-serif font was used as it's an easily readable font that matches the team of the website.
@@ -136,30 +138,22 @@ In addition, you may also use this section to discuss plans for additional featu
 
 ## Technologies Used
 
-- [JQuery](https://jquery.com)
-
-
-- HTML5, CSS3, JavaScript, Python programming languages
+- [JQuery](https://jquery.com) for enabling Materialize responsive elements.
+- HTML5, CSS3, JavaScript, Python programming languages.
 - [JQuery](https://jquery.com) is used to initialize the Materialize components.
 - [Materialize](https://materializecss.com/about.html) front-end framework for responsive websites.
-- [Flask]() - Python microframework Flask is used to create this project.
-- [Jinja]() - Jinja templating language is used with Flask in the HTML code.
-- [Balsamiq]() - Balsamiq is used to create wireframes for the project.
-- [PyMongo]() - Python toolkit to work with MongoDB.
-- [MongoDB]() - NoSQL database to store data at the backend.
-- [Google_Fonts]() - Google fonts Balsamiq Sans and Krona One are used in the project.
-- [Git&Github]() - Used for version control.
-- [Heroku]() - It is used as a hosting platform to deploy the project.
-- [HTML_Formatter]() - Used to format and beautify my code.
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/) - Python microframework Flask is used to create this project.
+- [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) - Jinja templating language is used with Flask in the HTML code.
+- [Balsamiq](https://balsamiq.com/) - Balsamiq is used to create wireframes for the project.
+- [PyMongo](https://pymongo.readthedocs.io/en/stable/) - Python toolkit to work with MongoDB.
+- [MongoDB](https://www.mongodb.com/2) - NoSQL database to store data at the backend.
+- [Google_Fonts](https://fonts.google.com/) - Google fonts Balsamiq Sans and Krona One are used in the project.
+- [Git&Github](https://github.com/) - Used for version control.
+- [Heroku](https://www.heroku.com/#) - It is used as a hosting platform to deploy the project.
+- [HTML_Formatter](https://webformatter.com/html) - Used to format and beautify my code.
 
 
 ## Testing
-
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
 
 1. Contact form:
     1. Go to the "Contact Us" page
@@ -171,18 +165,43 @@ In addition, you should mention in this section how your project looks and works
 
 You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+### Local Deployment
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
+1. Go to Recipebook Github Repository
+2. Click on Code beside Gitpod.
+3. A drop-down menu opens, then click on Download Zip
+4. Unzip the downloaded zip file.
+5. Open app.py file and install requirements.txt by running command pip3 install -r requirements.txt.
+6. Create a database in MongoDB following this structure - ADD PDF
+7. Create env.py file and add MONGO_URI and SECRET_KEY.
+8. Now run the app.py by running code python3 app.py
 
-In addition, if it is not obvious, you should also describe how to run your code locally.
+### Heroku Deployment
+
+[Save Birds live page](http://bird-nl-project.herokuapp.com/)
+[Save Birds Github Repository](Elena-Pakhmurskaia/MS_project_3)
+
+1. Login to your Heroku account.
+2. Click on New at the right top corner and click on Create new app.
+3. Choose App name and a region. Then click on Create app.
+4. Go to the terminal window and create requirements.txt by running the command pip3 freeze --local > requirements.txt
+5. Then create Procfile by running the command echo web: python app.py > Procfile Remember P is capital
+6. Add these files to the staging area by running the command git add requirements.txt & git add Procfile.
+7. Then commit these files respectively by running command git commit -m "Added requirements.txt & git commit -m "Added Procfile.
+8. Then push these files to GitHub by running the command git push
+9. Go back to Heroku to your App and click on the Deploy tab.
+10. Next, go to Deployment Method and click on Github Connect to Github.
+11. Next, make sure your Github Profile is displayed and add your repository name and click on Search.
+12. Once it finds your repository then click on Connect.
+13. Now go to Settings at the top. Then click on Reveal Config Vars.
+14. In Config Vars add IP with value 0.0.0.0 then add PORT as 5000 then add SECRET_KEY then add MONGO_URI and then add MONGO_DBNAME which is the name of the database.
+15. Now go back to the Deploy tab and click on Enable Automatic Deploys.
+16. Now click on Deploy Branch
+17. It will take a minute and display a message that Your app was successfully deployed.
+18. Click on View to launch your deployed app.
 
 
 ## Credits
