@@ -48,8 +48,8 @@
 ### Project goals
 
 The main goal of the project is to provide an environment for volunteers to collect the number and locations of their sightings. The target audience of the "Save Birds" is:
- - Individuals who would like to contribute to the preservation of the natural environment
- - Professionals who have been working on collecting endangered species data but need external support.
+- Individuals who would like to contribute to the preservation of the natural environment
+- Professionals who have been working on collecting endangered species data but need external support.
 
 
 ### Visitors' goals
@@ -126,12 +126,17 @@ Feater icon was used for the navigation to home page [Font Awesome](https://font
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
  
 ### Existing Features
-- 
-- ...
-
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+1. **Navigation Bar** displays pages based on the status of the user: if the user is registered and logged-in - "My Sightings" & "Add Sightings" are visible to this user; if its a new user or a logged-out user - "Register" and "Log In" are visible to this user.
+2. **Endangered Birds list** every user can see a summary list of all birds on a Home page. If a user wants to learn more about a specific bird a feature "Learn More" is available. With a click on "Learn More" the user can read detailed information about a bird.
+3. **Top** - is a small button on the right side of the screen that allows the user to jump on the top of the page.
+4. **Register** - User can easily register as the signup form is very simple. The signup form has two fields username and password. The username requires input min 3 characters, the password requires input min 6 characters. While creating a new account, the user will be notified if the chosen username already exists. 
+5. **Login** - If a username or/and password does not match user will be notified that the password and/or username are incorrect.
+6. **Flash Messages** - To certify users' actions various flash messages were implemented: on the adding of a new sighting, on editing the sighting, on deleting the sighting; on registration and log in. 
+7. **Logout** - ends running session and return to the login page.
+8. **My Sightings** - allows a user to view the details of the recorded sighting; no other users' inputs are displayed on this page.
+9. **Add Sighting** - allows creating a record of the sighting: name from the droplist, date from the date picker, the location from the droplist, and input free-text comments. The user is kept on the same page after a new sighting is added.
+9. **Edit/Delete Sighting** - user can edit a sighting by changing input values in the form. If the user wants to delete a sighting, a question will appear if the action is correct and the user wants to delete the sighting.
+10. **Cancel** - is displayed on the Edit page and allows a user to go back to the "My Sightings" page. 
 
 ### Features Left to Implement
 - Another feature idea
