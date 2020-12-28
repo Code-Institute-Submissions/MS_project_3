@@ -2,7 +2,9 @@
   <a href="https://bird-nl-project.herokuapp.com/">Save Birds</a>
 </h1>
 
-<a href="https://bird-nl-project.herokuapp.com/><img src="/static/images/heroimage.png" alt="Landing Page"></a>
+<h2 align="center">
+<a href="https://bird-nl-project.herokuapp.com/" target="_blank"><img src="/static/images/heroimage.png" alt="Landing Page" ></a>
+</h2>
 
 <div align="center">
     <h2>Birds population is rapidly descreaing worldwide. 
